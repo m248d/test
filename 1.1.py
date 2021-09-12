@@ -2,8 +2,7 @@
 def calculator_dog_age1(human_years):
    dog_years = human_years* 7
    return dog_years
-"""test the function - Calculate the age of the dog that corresponds to a human of age 35"""
-print(calculator_dog_age1(35))
+
 
 """1.1.2 function 2"""
 def calculator_dog_age2(human_years):
@@ -12,8 +11,6 @@ def calculator_dog_age2(human_years):
    else:
       dog_years = ((human_years - 2)*4) + 10.5*2  """each additional human year (after first 2 years) as 4 dog years"""
    return dog_years
-"""test the function - Calculate the age of the dog that corresponds to a human of age 35"""
-print(calculator_dog_age2(35))
 
 
 """1.2. function to check triangle validation"""
