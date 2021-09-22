@@ -54,3 +54,31 @@ def letter_check():
         
   ### test function
 letter_check()
+
+
+
+### 2.2. Cipher 
+import string
+
+
+'''This function support encryption of ascii letters
+    shift: shift value
+    shift >0 -> encrypt text 
+    shift <0 -> decrypt text'''
+    
+def caesar_transformation(shift):
+    message = input("please input your text here: ").lower()
+    
+    ### Storing lowercase letters in variable letters, this list will help to find the index of letter in the alphabet
+    alphabet = list(string.ascii_lowercase)
+    
+    ##final encryption message
+    code = ""
+    
+    for letter in message:
+        if letter not in alphabet:
+            code += letter
+        else:
+            new_shift = (alphabet.index(letter) + shift) % len(alphabet) # perform the shift
+            code = code + alphabet[new_shift]  # convert to new letter
+    print("Your message is transformed to \n", code)
